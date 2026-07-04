@@ -12,6 +12,7 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const [submittedProfile, setSubmittedProfile] = useState(null);
   const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   const validate = () => {
     const nextErrors = {};
@@ -31,6 +32,7 @@ export default function App() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setErrorMessage('');
+    setSuccessMessage('');
 
     const nextErrors = validate();
     setErrors(nextErrors);
@@ -73,7 +75,9 @@ export default function App() {
 
       const data = await response.json();
       setSubmittedProfile(data);
+      setSuccessMessage('✅ Profile generated successfully.');
     } catch (error) {
+      setSuccessMessage('');
       setSubmittedProfile(null);
       if (error instanceof TypeError && error.message === 'Failed to fetch') {
         setErrorMessage('Unable to reach the Flask backend at http://127.0.0.1:5000/profile. Start it with python app.py.');
@@ -145,6 +149,11 @@ export default function App() {
             </button>
 
             {errorMessage && <p className="status-message error">{errorMessage}</p>}
+            {successMessage && (
+              <p className="status-message success">
+                {successMessage}
+              </p>
+            )}
           </form>
 
           {submittedProfile && (
