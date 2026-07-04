@@ -1,5 +1,15 @@
 # User Profile Card Generator
 
+# User Profile Card Generator
+
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-3.0-000000?logo=flask&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
+![REST API](https://img.shields.io/badge/API-REST-4CAF50)
+![JSON](https://img.shields.io/badge/Data-JSON-000000?logo=json&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-Frontend-646CFF?logo=vite&logoColor=white)
+![Git](https://img.shields.io/badge/Git-Version_Control-F05032?logo=git&logoColor=white)
+
 A full-stack web application built with **React (Vite)** and **Flask** that allows users to generate a profile card by entering their name, bio, and profile image URL. The application demonstrates frontend-backend communication using HTTP POST requests and JSON data.
 
 ---
