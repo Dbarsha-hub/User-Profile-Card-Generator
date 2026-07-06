@@ -216,11 +216,3 @@ http://localhost:5173
 ## Author
 
 **Barsha Priyadarshini Das**
-
-Computer Science Undergraduate
-
----
-
-## License
-
-This project is developed for internship evaluation and educational purposes.
